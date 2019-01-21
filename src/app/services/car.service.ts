@@ -27,4 +27,8 @@ export class CarService {
   editCar(car: Car) {
     return this.http.put(environment.apiUrl + 'cars/', car);
   }
+
+  addCar(car: Car) {
+    return this.http.post(environment.apiUrl + 'cars/', car);
+  }
 }

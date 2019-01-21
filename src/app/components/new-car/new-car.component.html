@@ -1,3 +1,11 @@
-<p>
-  new-car works!
-</p>
+<div class="jumbotron">
+ <form [formGroup]="myForm" class="form-group" (ngSubmit)="onSubmit()">
+   <input type="text" class="form-control" formControlName="manufacturer" placeholder="manufacturer" name="manufacturer" id="manufacturer">
+   <input type="text" id="model" class="form-control" formControlName="model" placeholder="model">
+   <input type="number" id="price" class="form-control" formControlName="price" placeholder="price">
+   <input type="text" id="wiki" class="form-control" formControlName="wiki" placeholder="Wiki">
+  <button class="btn btn-primary">Submit</button>
+
+ </form>
+
+</div>
