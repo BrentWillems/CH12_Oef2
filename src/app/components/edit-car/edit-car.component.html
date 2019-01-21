@@ -1,4 +1,5 @@
 <div class="container jumbotron" *ngIf="car">
+  <button class="btn btn-primary" (click)="navigateBack()">Back</button>
   <h1><input type="text" [(ngModel)]="car.manufacturer"></h1>
   <h1><input type="text" [(ngModel)]="car.model"></h1>
   <h1><input type="text" [(ngModel)]="car.price"></h1>
