@@ -4,7 +4,7 @@
    <input type="text" id="model" class="form-control" formControlName="model" placeholder="model">
    <input type="number" id="price" class="form-control" formControlName="price" placeholder="price">
    <input type="text" id="wiki" class="form-control" formControlName="wiki" placeholder="Wiki">
-  <button class="btn btn-primary">Submit</button>
+  <button class="btn btn-primary" [disabled]="!myForm.valid">Submit</button>
 
  </form>
 
