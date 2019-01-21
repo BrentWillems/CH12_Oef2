@@ -1,9 +1,9 @@
 <div class="container jumbotron" *ngIf="car">
   <button class="btn btn-primary" (click)="navigateBack()">Back</button>
-  <h1><input type="text" [(ngModel)]="car.manufacturer"></h1>
-  <h1><input type="text" [(ngModel)]="car.model"></h1>
-  <h1><input type="text" [(ngModel)]="car.price"></h1>
-  <h1><input type="text" [(ngModel)]="car.wiki"></h1>
+  <h1><input type="text" class="form-control" [(ngModel)]="car.manufacturer"></h1>
+  <h1><input type="text" class="form-control" [(ngModel)]="car.model"></h1>
+  <h1><input type="text" class="form-control" [(ngModel)]="car.price"></h1>
+  <h1><input type="text" class="form-control" [(ngModel)]="car.wiki"></h1>
 
   <button class="btn btn-success" (click)='submit()'>Submit</button>
 </div>
