@@ -1,3 +1,13 @@
-<ul class="list-group">
-  <li *ngFor="let car of cars" class="list-group-item">{{car.manufacturer}}</li>
-</ul>
+<!-- <ul class="list-group container">
+  <li *ngFor="let car of cars" class="list-group-item">{{car.manufacturer}} | {{car.model}}</li>
+</ul> -->
+<div class="container card-group" >
+  <div class="card" *ngFor="let car of cars" style="width: 18rem;">
+    <a href="{{car.wiki}}"><div class="card-header">
+      {{car.manufacturer}} {{car.model}}
+    </div></a>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">€{{car.price}}</li>
+    </ul>
+  </div>
+</div>
