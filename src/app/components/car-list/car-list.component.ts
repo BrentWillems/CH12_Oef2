@@ -13,7 +13,10 @@ export class CarListComponent implements OnInit {
   constructor(private carService: CarService) { }
 
   ngOnInit(): void {
-    this.carService.getAll().subscribe(data => {this.cars = data; });
+    this.carService.getAll().subscribe(data => { this.cars = data; });
   }
 
+  deleteCar(id) {
+    this.carService.removeCarById(id).subscribe(() => { this.cars.splice(this.cars.findIndex(x => x._id.toString() === id), 1); });
+  }
 }

@@ -14,4 +14,9 @@ export class CarService {
   getAll(): Observable<Car[]> {
     return this.http.get<Car[]>(environment.apiUrl + 'cars');
   }
+
+  removeCarById(id) {
+    // console.log(id);
+    return this.http.delete(environment.apiUrl + 'cars/' + id);
+  }
 }
