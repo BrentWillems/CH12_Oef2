@@ -9,7 +9,7 @@
     <ul class="list-group list-group-flush">
       <li class="list-group-item">€{{car.price}}</li>
     </ul>
-    <button class="btn btn-warning">Edit</button>
+    <button class="btn btn-warning" [routerLink]="[ '/edit', car._id ]">Edit </button>
     <button class="btn btn-danger" (click)='deleteCar(car._id)'>Delete</button>
   </div>
 </div>
