@@ -15,8 +15,16 @@ export class CarService {
     return this.http.get<Car[]>(environment.apiUrl + 'cars');
   }
 
+  getById(id) {
+    return this.http.get<Car>(environment.apiUrl + 'cars/' + id);
+  }
+
   removeCarById(id) {
     // console.log(id);
     return this.http.delete(environment.apiUrl + 'cars/' + id);
+  }
+
+  editCar(car: Car) {
+    return this.http.put(environment.apiUrl + 'cars/', car);
   }
 }

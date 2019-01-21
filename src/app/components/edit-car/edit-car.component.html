@@ -1,3 +1,8 @@
-<p>
-  edit-car works!
-</p>
+<div class="container jumbotron" *ngIf="car">
+  <h1><input type="text" [(ngModel)]="car.manufacturer"></h1>
+  <h1><input type="text" [(ngModel)]="car.model"></h1>
+  <h1><input type="text" [(ngModel)]="car.price"></h1>
+  <h1><input type="text" [(ngModel)]="car.wiki"></h1>
+
+  <button class="btn btn-success" (click)='submit()'>Submit</button>
+</div>
